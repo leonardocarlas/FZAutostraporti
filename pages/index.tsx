@@ -72,6 +72,15 @@ const Home: NextPage = () => {
           </span>
         </a>
       </footer>
+
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
+
+      <div className="alert alert-primary" role="alert">
+        This is a primary alert—check it out!
+      </div>
+
     </div>
   )
 }

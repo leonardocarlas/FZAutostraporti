@@ -2,8 +2,15 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import {useRouter} from "next/router";
+import {Util} from "../utils/util";
 
 const Home: NextPage = () => {
+
+  let router = useRouter();
+  let t = Util.getLocale(router);
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -47,7 +54,7 @@ const Home: NextPage = () => {
           >
             <h2>Deploy &rarr;</h2>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              {t.header.aboutUs}
             </p>
           </a>
         </div>

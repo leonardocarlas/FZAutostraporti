@@ -1,23 +1,25 @@
 import { Constants } from "../../constants/constants";
 import Image from 'next/image';
 
-import styles from './Section1.module.scss'
-import utilStyles from '../../styles/utils.module.scss';
+import styles from './Front.module.scss'
+import utilStyles from '../../styles/util.module.scss';
 import { useRouter } from "next/router";
 import { Util } from "../../utils/util";
-
-
 
 export default function Front() {
 
     let router = useRouter();
     let t = Util.getLocale(router);
 
-
     return (
-        <div>
-            <p className={`${utilStyles.heading2Xl} ${styles.coloredName}`}>{t.section1.title}</p>
-            <p className={utilStyles.headingLg}>{t.section1.subtitle}</p>
+        <div className={styles.frontContainer}>
+            <div className={styles.frontContent}>
+                <p className={`${utilStyles.title} ${styles.title}`}>{Constants.SITETITLE}</p>
+                <div className={'flex flex-wrap flex-row align-center content-center mb-10'}>
+                    <button>Contact Us</button>
+                    <button>Services</button>      
+                </div>
+            </div>
         </div>
     );
     

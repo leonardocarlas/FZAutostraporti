@@ -1,55 +1,40 @@
-@import './../../styles/variables.module.scss';
-@import './../../styles/utils.module.scss';
-
-@mixin background-svg {
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+.frontContainer {
+    /* The image used */
+    background-image: url('../../public/images/front.jpg');
+    height: 61rem;
+    /* Center and scale the image nicely */
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
-}
+    background-position: center, center;
 
-.firstContainerDark, .firstContainerLight {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: stretch;
     align-items: center;
-    flex-wrap: wrap;
-    @include background-svg();
-    p {
-        margin: 4rem 5rem 0 5rem;
-        text-align: center;
-    }
-    .coloredName {
-        animation: pulse 5s infinite;
-    }
-}
 
-.firstContainerDark {
-    background-color: $black;
-    color: $white;
-}
+    .frontContent {
 
+        .title {
+            color: white;
+            font-weight: 800;
+        }
 
-@keyframes pulse {
-    0%, 100% {
-      color: $leoblue;
-    }
-    50% {
-      color: $leoviolet;
-    }
-}
-
-@media (min-width:1024px){ 
-    .firstContainerDark, .firstContainerLight {
-        aspect-ratio: 900/400;
-        background-image: url('../../public/svg/layer1.svg');
+        button {
+            color: white;
+            background-color: grey;
+            border-radius: 15px;
+            padding: 0.8rem 1rem 0.8rem 1rem;
+            margin: 1rem;
+            min-width: 15rem;
+            text-align: center;
+            font-size: large;
+        }
     }
 }
 
 @media (max-width:1023px) {
-    .firstContainerDark, .firstContainerLight  {
-        aspect-ratio: 540/960;
-        background-image: url('../../public/svg/layer1mobile.svg');
-    }
 
 }

@@ -1,0 +1,14 @@
+{
+  "header": {
+    "home" : "Home",
+    "aboutUs" : "Su di noi",
+    "services": "Servizi",
+    "buttonContactUs": "Contattaci"
+  },
+  "home": {
+    "about" : {
+      "title" : "Su di noi",
+      "subtitle" : ""
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.frontContainer {
+    /* The image used */
+    background-image: url('../../public/images/front.jpg');
+    height: 61rem;
+    /* Center and scale the image nicely */
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center, center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: stretch;
+    align-items: center;
+
+    .frontContent {
+
+        .title {
+            color: white;
+            font-weight: 800;
+        }
+
+        button {
+            color: white;
+            background-color: grey;
+            border-radius: 15px;
+            padding: 0.8rem 1rem 0.8rem 1rem;
+            margin: 1rem;
+            min-width: 15rem;
+            text-align: center;
+            font-size: large;
+        }
+    }
+}
+
+@media (max-width:1023px) {
+
+}

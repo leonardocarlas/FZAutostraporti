@@ -1,3 +1,6 @@
+@import '../../styles/variables.module.scss';
+
+
 .frontContainer {
     /* The image used */
     background-image: url('../../public/images/front.jpg');
@@ -11,30 +14,46 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-content: stretch;
     align-items: center;
 
+    .headerContainer {
+        width: 100%;
+    }
+
     .frontContent {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         .title {
             color: white;
             font-weight: 800;
         }
 
-        button {
-            color: white;
-            background-color: grey;
-            border-radius: 15px;
-            padding: 0.8rem 1rem 0.8rem 1rem;
-            margin: 1rem;
+        .button {
+            border-radius: 25px;
             min-width: 15rem;
-            text-align: center;
-            font-size: large;
+            background-color: $button-dark;
+            color: $white;
+        }
+
+        .white {
+            background-color: $button-light;
+            color: $black;
         }
     }
 }
 
 @media (max-width:1023px) {
 
+    .frontContent {
+        
+
+        .button {
+            margin: 0.4rem;
+        }
+    }
 }

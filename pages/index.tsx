@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.scss'
 import {useRouter} from "next/router";
 import {Util} from "../utils/util";
 import Front from '../components/Front/Front';
+import Header from '../components/Header/Header';
 
 const Home: NextPage = () => {
 
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container}>
+      
       <Front></Front>
       <Head>
         <title>Create Next App</title>

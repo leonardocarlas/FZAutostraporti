@@ -7,6 +7,7 @@ import {Util} from "../utils/util";
 import Front from '../components/Front/Front';
 import Header from '../components/Header/Header';
 import About from '../components/About';
+import Info from '../components/Info';
 
 const Home: NextPage = () => {
 
@@ -25,6 +26,8 @@ const Home: NextPage = () => {
       <Front></Front>
       
       <About></About>
+
+      <Info></Info>
 
       <main className={styles.main}>
         <h1 className={styles.title}>

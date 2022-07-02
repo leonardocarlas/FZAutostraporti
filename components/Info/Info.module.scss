@@ -1,0 +1,13 @@
+@import '../../styles/variables.module.scss';
+
+
+.imageContainer {
+    /* The image used */
+    background-image: url('../../public/images/info.jpg');
+    height: 61rem;
+    /* Center and scale the image nicely */
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center, center;
+}

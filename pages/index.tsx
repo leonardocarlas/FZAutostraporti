@@ -9,6 +9,7 @@ import Header from '../components/Header/Header';
 import About from '../components/About';
 import Info from '../components/Info';
 import Services from '../components/Services';
+import Contact from '../components/Contact';
 
 const Home: NextPage = () => {
 
@@ -32,6 +33,8 @@ const Home: NextPage = () => {
 
       <Services></Services>
 
+      <Contact></Contact>
+      
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>

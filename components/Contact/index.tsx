@@ -1,13 +1,9 @@
 import Image from "next/image";
 import styles from './Contact.module.scss';
-import coffee from '../../public/svg/coffee.svg';
-import coffeeWhite from '../../public/svg/white/coffee-white.svg';
 import { useRouter } from "next/router";
 import { ChangeEvent, SyntheticEvent, useState } from "react";
 import axios from "axios";
-import utilStyles from '../../styles/utils.module.scss';
-import Button from "../../components/Button/Button";
-import { useAppSelector } from "../../redux/hooks";
+import utilStyles from '../../styles/util.module.scss';
 import { Util } from "../../utils/util";
 
 export default function Contact() {
@@ -33,65 +29,56 @@ export default function Contact() {
         }
     }
 
-    const isDarkmode = useAppSelector((state) => state.darkmode.isDarkmode);
-
     return (
 
-        <div className={isDarkmode ? styles.sectionDark : styles.sectionLight}>
+        <div>
 
             { success ?
                 <div className={`text-black d-flex flex-col justify-center text-center p-4 bg-green-400`}>
-                    <p>{t.contact.mailSuccess}</p>
-                    <button className='underline block' onClick={() => {setSuccess(false)}}>{t.contact.mailSuccess}</button>
+                    <p></p>
+                    <button className='underline block' onClick={() => {setSuccess(false)}}></button>
                 </div>
                 :
                 ''
             }
             { failure ?
                 <div className={`text-black d-flex flex-col justify-center text-center p-4 bg-red-500`}>
-                    <p>{t.contact.mailSuccess}</p>
-                    <button onClick={() => {setFailure(false)}}>{t.contact.mailSuccessButton}</button>
+                    <p></p>
+                    <button onClick={() => {setFailure(false)}}></button>
                 </div>
                 :
                 ''
             }
             
-            <div className={utilStyles.column}>
-                <p className={utilStyles.title}>{t.contact.title}</p>
-                <p className={utilStyles.subtitle}>{t.contact.subtitle}</p>
-                <div className={styles.imageContainer}>
-                    { isDarkmode ? 
-                    <Image src={coffeeWhite} width={100} height={100} alt={'coffee-image'}></Image>
-                    :
-                    <Image src={coffee} width={100} height={100} alt={'coffee-image'}></Image>
-                    }
-                    
-                </div>
+            <div>
+                <p className={utilStyles.title}></p>
+                <p className={utilStyles.subtitle}></p>
             </div>
 
             <div className={styles.formContainer}>
                 <form method="post" onSubmit={handleSubmit}>
                     <div className={styles.rowForm}>
                         <div className={styles.formElement}>
-                            <label htmlFor="name">{t.contact.nome}</label>
+                            <label htmlFor="name"></label>
                             <input onChange={handleChange} type="text" id="name" name="name" placeholder="Mario Rossi" required />
                         </div>
                         <div className={styles.formElement}>
-                            <label htmlFor="email">{t.contact.email}</label>
+                            <label htmlFor="email"></label>
                             <input onChange={handleChange} type="email" id="email" name="email" placeholder="mariorossi@gmail.com" required/>
                         </div>
                     </div>
                     <div className={styles.rowForm}>
                         <div className={styles.formElement}>
-                            <label htmlFor="text">{t.contact.text}</label>
+                            <label htmlFor="text"></label>
                             <textarea onChange={handleChange} id="text" name="text" placeholder="" required rows={7} cols={50}></textarea>
                         </div>
                     </div>
                     <div className={`${styles.rowForm} my-5 `} >
-                        <Button label={t.contact.submit} type={'submit'}></Button>
+                        <button type={'submit'}>Submit</button>
                     </div>
                 </form>
             </div>
+            
         </div>
     
     );

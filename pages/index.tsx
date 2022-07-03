@@ -8,6 +8,7 @@ import Front from '../components/Front/Front';
 import Header from '../components/Header/Header';
 import About from '../components/About';
 import Info from '../components/Info';
+import Services from '../components/Services';
 
 const Home: NextPage = () => {
 
@@ -28,6 +29,8 @@ const Home: NextPage = () => {
       <About></About>
 
       <Info></Info>
+
+      <Services></Services>
 
       <main className={styles.main}>
         <h1 className={styles.title}>

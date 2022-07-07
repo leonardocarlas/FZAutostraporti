@@ -9,9 +9,12 @@ export default function Services() {
      return (
         <>
         <div className={'flex flex-col flex-wrap text-center p-20 lg:p-40 bg-black text-white h-[60rem]'}>
-            <p className={'text-2xl'}>Services we Provide</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br></br>
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+            <p className={utilStyles.title}>Services we Provide</p>
+            <p className={utilStyles.subtitle}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br></br></p>
+            <a href="https://nextjs.org/docs" className={styles.card}>
+                <h2>Documentation &rarr;</h2>
+                <p>Find in-depth information about Next.js features and API.</p>
+            </a>
         </div>
         </>
      );

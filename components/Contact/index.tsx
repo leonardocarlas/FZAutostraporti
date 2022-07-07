@@ -5,6 +5,7 @@ import { ChangeEvent, SyntheticEvent, useState } from "react";
 import axios from "axios";
 import utilStyles from '../../styles/util.module.scss';
 import { Util } from "../../utils/util";
+import office from '../../public/images/ufficio.jpg';
 
 export default function Contact() {
 
@@ -31,7 +32,50 @@ export default function Contact() {
 
     return (
 
-        <div>
+        <div className={'bg-black flex flex-col flex-wrap content-center text-white'}>
+            
+            <div>
+                <p className={utilStyles.title}>Contact Us</p>
+                <p className={utilStyles.subtitle}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <div className={'m-10'}>
+                    <Image src={office}></Image>
+                </div>
+            </div>
+
+            <div className={'mt-20 flex flex-row flex-wrap justify-between text-2xl'}>
+                {/* SI POTREBBE FARE COME SYSDATA */}
+                <p>+39 349 359 2222</p>
+                <p>Santorso, Via Ospedale 7, 36014, Vicenza</p>
+            </div>
+
+            <div className={'mt-20'}>
+                <p className={utilStyles.title}>Say Hello</p>
+                <p className={utilStyles.subtitle}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            </div>
+
+            <div className={styles.formContainer}>
+                <form method="post" onSubmit={handleSubmit}>
+                    <div className={styles.rowForm}>
+                        <div className={styles.formElement}>
+                            <label htmlFor="name">Name</label>
+                            <input onChange={handleChange} type="text" id="name" name="name" placeholder="Mario Rossi" required />
+                        </div>
+                        <div className={styles.formElement}>
+                            <label htmlFor="email">Email</label>
+                            <input onChange={handleChange} type="email" id="email" name="email" placeholder="mariorossi@gmail.com" required/>
+                        </div>
+                    </div>
+                    <div className={styles.rowForm}>
+                        <div className={ `${styles.formElement} w-[300px] md:w-[610px] lg:w-[610px]`}>
+                            <label htmlFor="text">Text</label>
+                            <textarea onChange={handleChange} id="text" name="text" placeholder="" required rows={7} cols={50}></textarea>
+                        </div>
+                    </div>
+                    <div className={`${styles.rowForm} my-5 `} >
+                        <button type={'submit'}>Submit</button>
+                    </div>
+                </form>
+            </div>
 
             { success ?
                 <div className={`text-black d-flex flex-col justify-center text-center p-4 bg-green-400`}>
@@ -49,35 +93,6 @@ export default function Contact() {
                 :
                 ''
             }
-            
-            <div>
-                <p className={utilStyles.title}></p>
-                <p className={utilStyles.subtitle}></p>
-            </div>
-
-            <div className={styles.formContainer}>
-                <form method="post" onSubmit={handleSubmit}>
-                    <div className={styles.rowForm}>
-                        <div className={styles.formElement}>
-                            <label htmlFor="name"></label>
-                            <input onChange={handleChange} type="text" id="name" name="name" placeholder="Mario Rossi" required />
-                        </div>
-                        <div className={styles.formElement}>
-                            <label htmlFor="email"></label>
-                            <input onChange={handleChange} type="email" id="email" name="email" placeholder="mariorossi@gmail.com" required/>
-                        </div>
-                    </div>
-                    <div className={styles.rowForm}>
-                        <div className={styles.formElement}>
-                            <label htmlFor="text"></label>
-                            <textarea onChange={handleChange} id="text" name="text" placeholder="" required rows={7} cols={50}></textarea>
-                        </div>
-                    </div>
-                    <div className={`${styles.rowForm} my-5 `} >
-                        <button type={'submit'}>Submit</button>
-                    </div>
-                </form>
-            </div>
             
         </div>
     

@@ -9,8 +9,8 @@ import { useRouter } from 'next/router'
 import { Util } from '../../utils/util'
 import { PathPage } from '../../constants/path-pages'
 import utilStyles from '../../styles/util.module.scss';
-
-
+import logo1 from '../../public/svg/logo1.svg';
+import logo2 from '../../public/svg/logo2.svg';
 export default function Header() {
 
     let router = useRouter();
@@ -19,7 +19,7 @@ export default function Header() {
     return (
         <nav className="navbar navbar-expand-lg bg-transparent">
             <div className="container-fluid">
-                <a className={'navbar-brand ml-8'} href="#">LOGO</a>
+                <a className={'navbar-brand ml-8'} href="#"><Image src={logo2} width={100} height={100}></Image></a>
                 <button className={`${styles.toggleButton} mt-3 mr-5`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <p>Menu</p>
                 </button>

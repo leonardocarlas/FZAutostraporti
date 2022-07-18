@@ -16,9 +16,10 @@ export default function Front() {
         <div className={'bg-black text-white p-20 lg:p-40'}>
             <div className={'flex flex-row flex-wrap justify-start mb-4'}>
                 <div className={'flex flex-col flex-wrap max-w-[400px]'}>
-                    <p className={'text-2xl'}>About Us</p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                         when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+                    <p className={`${utilStyles.title} ${styles.title}`}>ABOUT US</p>
+                    <p className={`${utilStyles.subtitle} ${styles.title}`}>F.Z. Autotrasporti è un'azienda nata nel 1997 specializzata nel trasporto merci in conto terzi, operando
+                        nel territorio nazionale ed internazionale e prevalentemente nel nord Italia. <br></br><br></br>
+                     </p>
                 </div>
             </div>
             <div className={'flex flex-row flex-wrap justify-end rounded-lg'}>

@@ -7,8 +7,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
   background-color: black;
 }
 
@@ -19,4 +19,15 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: blackCondensed;
+}
+
+
+
+@font-face {
+  font-family: 'blackCondensed';
+  src: url('../public/font/blackcondensed.ttf');
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 4px;
 }

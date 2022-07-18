@@ -6,6 +6,7 @@ import axios from "axios";
 import utilStyles from '../../styles/util.module.scss';
 import { Util } from "../../utils/util";
 import office from '../../public/images/ufficio.jpg';
+import trial from '../../public/svg/gear-white.svg';
 
 export default function Contact() {
 
@@ -32,25 +33,32 @@ export default function Contact() {
 
     return (
 
-        <div className={'bg-black flex flex-col flex-wrap content-center text-white'}>
+        <div className={'bg-black flex flex-col flex-wrap text-white'}>
             
             <div>
-                <p className={utilStyles.title}>Contact Us</p>
-                <p className={utilStyles.subtitle}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                <div className={'m-10'}>
-                    <Image src={office}></Image>
+                <p className={utilStyles.title}>CONTATTACI</p>
+                <p className={utilStyles.subtitle}>per avere un approfondimento sul servizio.</p>
+                <div className={'m-10 flex flex-row justify-center'}>
+                    <Image src={office} className={'rounded-2'}></Image>
                 </div>
             </div>
 
-            <div className={'mt-20 flex flex-row flex-wrap justify-between text-2xl'}>
-                {/* SI POTREBBE FARE COME SYSDATA */}
-                <p>+39 349 359 2222</p>
-                <p>Santorso, Via Ospedale 7, 36014, Vicenza</p>
+            <div className={'my-40 flex flex-row flex-wrap justify-around'}>
+                <div className={'flex flex-col'}>
+                    <div className={'mb-2'}><Image src={trial} width={40} height={40}></Image></div>
+                    <p className={`${utilStyles.title} text-left`}>CONTATTO TELEFONICO</p>
+                    <p className={'text-3xl'}>+39 349 359 2222</p>
+                </div>
+                <div className={'flex flex-col'}>
+                    <div className={'mb-2'}><Image src={trial} width={40} height={40}></Image></div>
+                    <p className={`${utilStyles.title} text-left`}>INDIRIZZO DELLA SEDE</p>
+                    <p className={'text-3xl'}>Via Garziere 13, Santorso, 36014, Vicenza (IT)</p>
+                </div>
             </div>
 
             <div className={'mt-20'}>
-                <p className={utilStyles.title}>Say Hello</p>
-                <p className={utilStyles.subtitle}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <p className={utilStyles.title}>SCRIVICI</p>
+                <p className={utilStyles.subtitle}>e avrai una risposta alle tue domande nel più breve tempo possibile</p>
             </div>
 
             <div className={styles.formContainer}>

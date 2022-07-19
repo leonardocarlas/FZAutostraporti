@@ -1,0 +1,12 @@
+
+
+.imageContainer {
+    /* The image used */
+    background-image: url('../../public/images/marcofront.jpg');
+    // background-image: url('../../public/images/marcofront.jpg');
+    /* Center and scale the image nicely */
+    width: 100vw;
+    height: 50vh;
+    background-size: cover;
+    background-position: center, center;
+}

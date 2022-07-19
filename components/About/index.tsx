@@ -13,7 +13,7 @@ export default function Front() {
     let t = Util.getLocale(router);
 
     return (
-        <div className={'bg-black text-white p-20 lg:p-40'}>
+        <div className={'bg-black text-white p-20 lg:p-40 h'}>
             <div className={'flex flex-row flex-wrap justify-start mb-4'}>
                 <div className={'flex flex-col flex-wrap max-w-[400px]'}>
                     <p className={`${utilStyles.title} ${styles.title}`}>ABOUT US</p>

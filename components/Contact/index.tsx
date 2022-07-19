@@ -5,9 +5,10 @@ import { ChangeEvent, SyntheticEvent, useState } from "react";
 import axios from "axios";
 import utilStyles from '../../styles/util.module.scss';
 import { Util } from "../../utils/util";
-import office from '../../public/images/ufficio.jpg';
+import office from '../../public/images/office.png';
 import trial from '../../public/svg/gear-white.svg';
-
+import location from '../../public/svg/location.svg';
+import phone from '../../public/svg/phone.svg';
 export default function Contact() {
 
     const router = useRouter();
@@ -33,26 +34,29 @@ export default function Contact() {
 
     return (
 
-        <div className={'bg-black flex flex-col flex-wrap text-white'}>
+        <div className={'bg-black flex flex-col flex-wrap text-white p-20 lg:p-40'}>
             
-            <div>
-                <p className={utilStyles.title}>CONTATTACI</p>
-                <p className={utilStyles.subtitle}>per avere un approfondimento sul servizio.</p>
-                <div className={'m-10 flex flex-row justify-center'}>
-                    <Image src={office} className={'rounded-2'}></Image>
-                </div>
-            </div>
-
-            <div className={'my-40 flex flex-row flex-wrap justify-around'}>
-                <div className={'flex flex-col'}>
-                    <div className={'mb-2'}><Image src={trial} width={40} height={40}></Image></div>
-                    <p className={`${utilStyles.title} text-left`}>CONTATTO TELEFONICO</p>
-                    <p className={'text-3xl'}>+39 349 359 2222</p>
+           
+            <p className={utilStyles.title}>CONTATTACI</p>
+            <p className={utilStyles.subtitle}>per avere un approfondimento sul servizio.</p>
+            
+            
+            <div className={'mt-20 flex flex-row flex-wrap justify-around'}>
+                <div className={'m-0'}>
+                    <a href="#"><Image src={office} className={styles.officeImage}></Image></a>
                 </div>
                 <div className={'flex flex-col'}>
-                    <div className={'mb-2'}><Image src={trial} width={40} height={40}></Image></div>
-                    <p className={`${utilStyles.title} text-left`}>INDIRIZZO DELLA SEDE</p>
-                    <p className={'text-3xl'}>Via Garziere 13, Santorso, 36014, Vicenza (IT)</p>
+                    <div className="mt-4">
+                        <div className={'mb-2'}><Image src={location} width={40} height={40}></Image></div>
+                        <p className={`${utilStyles.title} ${styles.title}`}>INDIRIZZO DELLA SEDE</p>
+                        <p className={'text-3xl'}>Via Garziere 13, Santorso, 36014, Vicenza (IT)</p>
+                    </div>
+                    <div className="mt-20">
+                        <div className={'mb-2'}><Image src={phone} width={40} height={40}></Image></div>
+                        <p className={`${utilStyles.title} ${styles.title}`}>CONTATTO TELEFONICO</p>
+                        <p className={'text-3xl'}>+39 349 359 2222</p>
+                    </div>
+                    
                 </div>
             </div>
 
